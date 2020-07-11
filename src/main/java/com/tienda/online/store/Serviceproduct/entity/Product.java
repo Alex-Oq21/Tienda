@@ -1,12 +1,20 @@
 package com.tienda.online.store.Serviceproduct.entity;
 
 import jdk.internal.vm.annotation.Stable;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Table (name="tbl_products")
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Data
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
