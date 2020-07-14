@@ -6,11 +6,11 @@ import com.tienda.online.store.Serviceproduct.entity.Product;
 import java.util.List;
 
 public interface ProductService {
-        public List<Product> ListAllProduct();
-        public Product getProduct(Long id);
-        public Product createProduct(Product product);
-        public Product updateProduct(Product product);
-        public Product deleteProduct(Long id);
-        public List<Product> findByCategory(Category category);
-        public Product updateStock(Long id, Double quantity);
+        List<Product> ListAllProduct();
+        Product getProduct(Long id);
+        Product createProduct(Product product);
+        Product updateProduct(Product product);
+        Product deleteProduct(Long id);
+        List<Product> findByCategory(Category category);
+        Product updateStock(Long id, Double quantity);
 }

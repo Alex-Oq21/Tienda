@@ -3,15 +3,18 @@ package com.tienda.online.store.Serviceproduct.service;
 import com.tienda.online.store.Serviceproduct.entity.Category;
 import com.tienda.online.store.Serviceproduct.entity.Product;
 import com.tienda.online.store.Serviceproduct.repository.ProductRepository;
+import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
-
+@Service
+@RequiredArgsConstructor
 public class ProductServiceImpl implements ProductService {
-    @Autowired
-    ProductRepository productRepository;
 
+    private final ProductRepository productRepository;
     @Override
     public List<Product> ListAllProduct() {
         return productRepository.findAll();
