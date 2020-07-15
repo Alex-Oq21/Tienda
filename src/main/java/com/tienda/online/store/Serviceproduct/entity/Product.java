@@ -1,5 +1,6 @@
 package com.tienda.online.store.Serviceproduct.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jdk.internal.vm.annotation.Stable;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -29,5 +30,6 @@ public class Product {
     private Date createAt;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
+    @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
     private Category category;
 }
