@@ -71,6 +71,6 @@ public class ProductController {
         if (product == null){
             return ResponseEntity.notFound().build();
         }
-        return ResponseEntity.ok(product);
+         return ResponseEntity.ok(product);
      }
 }
